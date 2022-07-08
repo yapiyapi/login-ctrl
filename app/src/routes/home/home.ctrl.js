@@ -17,8 +17,7 @@ const output = {
 const process = {
     login :(req,res)=>{
         const id = req.body.id,
-        psword = req.body.ps;
-
+        psword = req.body.psword;
         const users = UserStorage.getUsers('id','psword');
         const response = {};
         if(users.id.includes(id)){

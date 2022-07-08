@@ -6,6 +6,7 @@ class UserStorage{
         psword:['1234','123', '12324'],
         name : ['하이', '마이','네임'],
     };
+
     static getUsers(...fields){
         const users = this.#users;
         const newUsers = fields.reduce((newUsers, field)=>{
@@ -13,6 +14,7 @@ class UserStorage{
                 newUsers[field]= users[field];
             }
             return newUsers;
+            
         },{});
         return newUsers;
     }

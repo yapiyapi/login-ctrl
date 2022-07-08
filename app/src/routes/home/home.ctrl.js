@@ -15,7 +15,7 @@ const output = {
 
 const process = {
     login :(req,res)=>{
-        const user = new User();
+        const user = new User(req.body);
         const response = user.login();
         return res.json(response);
         // const id = req.body.id,
